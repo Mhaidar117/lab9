@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+        <body>
+             <h1>Famous Quotes Search</h1>
+             
+     <!--which route will be executed-->
+        <form action="/quotes"> 
+       
+       Keyword: <input type="text" name="keyword">
+       category:
+           <select name="category">
+               <option>Select one</option>
+               <% categories.forEach(function(i){ %>
+               <option> <%=i.category%> </option>
+               
+              <% });%>
+           </select>
+           
+       Author:
+           <select name = "lastName">
+               <option>Select one</option>
+               <% lastNames.forEach(function(i){ %>
+               <option> <%=i.lastName%> </option>
+               
+              <% });%>
+           </select>
+           
+           <br><br>
+    <input type="radio" id="M" name="sex" value="M"> <label for="M">Male</label>
+    <input type="radio" id="F" name="sex" value="F"> <label for="F">Female</label>
+    <br><br>
+           
+    <!--<option value="1">Albert Einstein</option>-->
+       
+       <button> Search! </button>
+       </form>
+
+       </body>
+</html>
